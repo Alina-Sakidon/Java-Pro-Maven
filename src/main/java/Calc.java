@@ -3,6 +3,9 @@ import com.sun.scenario.effect.impl.sw.java.JSWBlend_EXCLUSIONPeer;
 public class Calc {
 
     public int perform(int first, int second, Operator operator) {
+        if (operator == null) {
+            operator = Operator.DEFAULT;
+        }
         switch (operator) {
             case SUM:
                 return first + second;
